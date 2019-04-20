@@ -7,7 +7,7 @@ export class WebcamComponent extends React.Component {
         super(props);
         this.videoTag = React.createRef()
         this.state = {
-            url : "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAZyRx-Nv-pimpzKJlrse4ik-qblG9Mgxc"
+            url : "https://vision.googleapis.com/v1/images:annotate?key="
         }
     }
 
@@ -18,6 +18,7 @@ export class WebcamComponent extends React.Component {
             .then(stream => this.videoTag.current.srcObject = stream)
             .catch(console.log);
     }
+
 
     render() {
         return (<video id={this.props.id}
