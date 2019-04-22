@@ -2,7 +2,12 @@ import csv
 import requests 
 import xml.etree.ElementTree as ET 
 from collections import OrderedDict
+import json
+import math
   
+def roundup(x):
+    return int(math.ceil(x / 10.0)) * 10
+
 def loadRSS(): 
   
     # url of rss feed 
@@ -30,7 +35,7 @@ def parseXML(xmlfile):
         for s in p:
             t2 = t
             if 't' in s.keys():
-                t2 = t + int(s.attrib['t'])
+                t2 = roundup(t + int(s.attrib['t']))
             words[t2] = s.text.strip()
             # print(s.tag, s.attrib)
         # print('------')
@@ -54,7 +59,9 @@ def savetoCSV(words, filename):
         for key in words.keys():
                 f.write("%s,%s\n"%(key,words[key]))
     
-
+def savetoJSON(words, filename):
+    with open(filename, 'w') as outfile:  
+        json.dump(words, outfile)
 
 def main(): 
     # load rss from web to update existing xml file 
@@ -62,10 +69,10 @@ def main():
   
     # parse xml file 
     words = parseXML('timetext.xml') 
-    uwords = countwords(words)
+    # uwords = countwords(words)
     # store news items in a csv file 
-    savetoCSV(words, 'timetext.csv') 
-    savetoCSV(uwords, 'uniquewords.csv') 
+    savetoJSON(words, 'timetext2.json') 
+    # savetoCSV(uwords, 'uniquewords.csv') 
       
       
 if __name__ == "__main__": 
