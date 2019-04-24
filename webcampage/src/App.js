@@ -7,9 +7,12 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.takePicture = this.takePicture.bind(this);
+        this.getResponse = this.getResponse.bind(this);
+        this.sendRequest = this.sendRequest.bind(this);
         //setInterval(this.takePicture, 3000);
         this.state = {
-            url : "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAZyRx-Nv-pimpzKJlrse4ik-qblG9Mgxc"
+            url : "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyAZyRx-Nv-pimpzKJlrse4ik-qblG9Mgxc",
+            arrayOfElems : ''
         }
     }
 
@@ -66,17 +69,43 @@ export default class App extends Component {
             ]
         };
 
+        var arrayOfElements = [];
+
         const {labelAnnotations} =  fetch(this.state.url, {
             method: 'POST',
             body: JSON.stringify(request)
+        }).then(blob => {
+            blob.json().then(function(data) {
+                console.log(data);
+                var i;
+                for(i=1; i<data.responses[0].textAnnotations.length; i++){
+                    console.log(data.responses[0].textAnnotations[i]);
+                    var style = "top: " + data.responses[0].textAnnotations[i].boundingPoly.vertices[0].y + "; left: " +
+                    data.responses[0].textAnnotations[i].boundingPoly.vertices[1].x + "; background-color: black; z-index: 2;"
+                    + "height: 20px; width: 20px;";
+                    var element = (<div style={style}> {data.responses[0].textAnnotations[i].description}</div>);
+                    arrayOfElements.push(element);
+                }
+            })
         });
 
-        console.log(labelAnnotations);
+        console.log(arrayOfElements);
+        this.setState({
+            arrayOfElems : arrayOfElements
+        });
+
+    }
+
+    getResponse(response){
+        console.log(response);
     }
 
     render() {
         return (
             <div style={style.container}>
+                <div>
+                    {this.state.arrayOfElems}
+                </div>
                 <Camera
                     style={style.preview}
                     ref={(cam) => {
