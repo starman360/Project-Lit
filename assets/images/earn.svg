@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1536px" height="1536px" viewBox="0 0 1536 1536" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>wordmark-square-gold</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="50%" y2="115.867513%" id="linearGradient-1">
+            <stop stop-color="#F6BB6A" offset="0%"></stop>
+            <stop stop-color="#A57C51" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="59.421875%" y2="331.263021%" id="linearGradient-2">
+            <stop stop-color="#F6BB6A" offset="0%"></stop>
+            <stop stop-color="#A57C51" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="41.8139648%" y2="129.284668%" id="linearGradient-3">
+            <stop stop-color="#F6BB6A" offset="0%"></stop>
+            <stop stop-color="#A57C51" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="base" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="wordmark-square-gold" fill-rule="nonzero">
+            <g id="wordmark-h-gold" transform="translate(0.000000, 427.000000)">
+                <g id="E-gold" transform="translate(-85.333333, 0.000000)">
+                    <polygon id="Shape" fill="url(#linearGradient-1)" points="512.25 170.75 512.25 85.375 256.125 85.375 170.75 85.375 170.75 597.625 256.125 597.625 512.25 597.625 512.25 512.25 256.125 512.25 256.125 170.75"></polygon>
+                    <polygon id="Shape" fill="url(#linearGradient-2)" points="384.1875 256.125 277.46875 384.1875 490.90625 384.1875"></polygon>
+                </g>
+                <path d="M725.333333,256.125 L725.333333,278.962812 C700.213333,264.449063 671.093333,256.125 640,256.125 C545.76,256.125 469.333333,332.588984 469.333333,426.875 C469.333333,521.161016 545.76,597.625 640,597.625 C671.093333,597.625 700.213333,589.300938 725.333333,574.787188 L725.333333,597.625 L810.666667,597.625 L810.666667,256.125 L725.333333,256.125 Z M640,512.25 C592.853333,512.25 554.666667,474.044688 554.666667,426.875 C554.666667,379.705313 592.853333,341.5 640,341.5 C687.146667,341.5 725.333333,379.705313 725.333333,426.875 C725.333333,474.044688 687.146667,512.25 640,512.25 Z" id="Shape" fill="url(#linearGradient-3)"></path>
+                <path d="M1024,256.125 C992.906667,256.125 963.786667,264.449063 938.666667,278.962812 L938.666667,256.125 L853.333333,256.125 L853.333333,597.625 L938.666667,597.625 L938.666667,574.787188 L938.666667,426.875 C938.666667,379.705312 976.853333,341.5 1024,341.5 L1066.66667,341.5 L1066.66667,256.125 L1024,256.125 Z" id="Shape" fill="url(#linearGradient-3)"></path>
+                <path d="M1280,256.125 C1248.90667,256.125 1219.78667,264.449063 1194.66667,278.962812 L1194.66667,256.125 L1109.33333,256.125 L1109.33333,597.625 L1194.66667,597.625 L1194.66667,574.787188 L1194.66667,426.875 C1194.66667,379.705312 1232.85333,341.5 1280,341.5 C1327.14667,341.5 1365.33333,379.705312 1365.33333,426.875 L1365.33333,574.787188 L1365.33333,597.625 L1450.66667,597.625 L1450.66667,426.875 C1450.66667,332.588984 1374.24,256.125 1280,256.125 Z" id="Shape" fill="url(#linearGradient-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
